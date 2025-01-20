@@ -1,7 +1,8 @@
 import React from "react";
 
-const Moviecard = () => {
-  const Poster = "https://www.omdbapi.com/src/poster.jpg";
+const Moviecard = ({ moviesObj }) => {
+  const { Poster, Title, imdbRating, Plot } = moviesObj;
+
   return (
     <div className="container ">
       <div className="row  border rounded mt-5 p-2 movie-card-item ">
@@ -9,9 +10,9 @@ const Moviecard = () => {
           <img src={Poster} alt="" />
         </div>
         <div className="col-md text-dark">
-          <h3>Movie Name</h3>
-          <p>IMDB Rating: 5.5</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <h3>{Title}</h3>
+          <p>IMDB Rating: {imdbRating}</p>
+          <p>{Plot}</p>
           <div className="text-center d-flex justify-content-around">
             <button className="btn btn-warning">Drama</button>
             <button className="btn btn-info">Action</button>

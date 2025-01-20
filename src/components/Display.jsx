@@ -15,9 +15,7 @@ const Display = () => {
         </div>
 
         <div className="row">
-          <div className="col">
-            <Moviecard />
-          </div>
+          <div className="col">{/* <Moviecard /> */}</div>
         </div>
       </div>
     </div>
